@@ -2,13 +2,10 @@
 import { Inter } from "next/font/google";
 import { AntdRegistry } from "@ant-design/nextjs-registry";
 import { Breadcrumb, Layout, Menu, theme } from "antd";
+import { adminMenuItems } from "../utils/menu";
 const { Header, Content, Footer } = Layout;
 
 const inter = Inter({ subsets: ["latin"] });
-const items = new Array(3).fill(null).map((_, index) => ({
-  key: String(index + 1),
-  label: `nav ${index + 1}`,
-}));
 
 export default function AdminLayout({
   children,
@@ -39,7 +36,7 @@ export default function AdminLayout({
                 theme="dark"
                 mode="horizontal"
                 defaultSelectedKeys={["2"]}
-                items={items}
+                items={adminMenuItems}
                 style={{ flex: 1, minWidth: 0 }}
               />
             </Header>
