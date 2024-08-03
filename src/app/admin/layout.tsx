@@ -20,7 +20,7 @@ export default function AdminLayout({
     <html lang="en">
       <body className={inter.className}>
         <AntdRegistry>
-          <Layout>
+          <Layout className="layout">
             <Header
               style={{
                 position: "sticky",
